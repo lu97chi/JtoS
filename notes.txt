@@ -1,0 +1,36 @@
+Notes from junior to senior course:
+	Part 1 SSH.
+	-is a secure shell protocol, is a way to comunicate computers over the internet, one computer to another.
+	-command ssh <user>@<host>
+	-copy files from computer to another computer via ssh using rsync -av . <username>@<host>:~foldername
+	-ssh uses 3 tecniques, symmetrical encryption, asymmetrical encryption, hashing
+	* symmetrical encryption:
+		-uses one encryption key for both encryption and decryption.
+		-if somenone has the key... something bad happend.
+		-key exchange algorithm: the key is never trasmited trough the client and server
+	* asymmetrical encryption:
+		-uses two keys for encryption and decryption, one pair of public and one of private
+		-private key can not be calculated mathematical by the public key
+		-diffie hellman key exchange
+	* hashing
+		-it is not used to decrypt something
+		-hmac 
+	1-Diffie-Hellman key exchange
+	2-Arrive at Symmetric key
+	3-Make sure of no funny business
+	4-Authenticate User
+	-maybe password is not that secure as you could think...
+	* How to generate a ssh key
+		1- cd ~/.ssh
+		2- ssh-keygen -C "lu97is@gmail.com" (check out what flags you can use)
+		2.1 - ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+		3- only share .pub key
+		4- copy the public key:
+			1- pbcopy < ~(rootOfYourFile)
+				if somehow doesnt work
+			2- cat < ~(rootOfYourFile) (./ssh/<nameOfKey>
+		5- add the public key to your server
+		6- identify yourself 
+			1- ssh-add ~/(rootOfYourFile)
+		7
+do the what you missed...
