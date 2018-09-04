@@ -32,5 +32,21 @@ Notes from junior to senior course:
 		5- add the public key to your server
 		6- identify yourself 
 			1- ssh-add ~/(rootOfYourFile)
-		7
+	
+
+	Part 2: Perfomance.
+	-a 5mb image on a landing page is really necesary?
+	-3 parts of optimization: front-request-backend 
+	* request:
+		"honey i shrunk the files"
+		1.-Minimize text: Js, Css, Html, UglifyJS can do it, or webpack make it also
+		2.-Format of images:
+			 *Jpg are usually for photographs kinda big
+			 *Gif for small animation
+			 *Png limit the number of color kinda smaller than Jpg
+			 *Svg vector graphics kinda small, good for retina and 4k
+		"The traveling deliveryman"
+		1.-less trips, maybe native is better
+		2.-critical render path
+	
 do the what you missed...
